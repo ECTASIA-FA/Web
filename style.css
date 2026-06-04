@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  font-family: 'Oswald', Arial, sans-serif;
+  background: #06131d;
+  color: white;
+  overflow-x: hidden;
+}
+
+.navbar {
+  height: 88px;
+  background: linear-gradient(90deg, #04111b, #072031);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 26px 0 16px;
+  border-top: 2px solid #0ea5e9;
+  box-shadow: 0 0 35px rgba(56, 189, 248, 0.25);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 330px;
+}
+
+.logo {
+  width: 52px;
+  height: 52px;
+  object-fit: contain;
+  filter: drop-shadow(0 0 10px rgba(125, 211, 252, 0.9));
+}
+
+.brand-text {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.title {
+  font-size: 38px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  line-height: 1;
+  padding-right: 12px;
+  border-right: 2px solid white;
+}
+
+.status {
+  font-size: 16px;
+  font-weight: 700;
+  color: #e0f2fe;
+  margin-top: 2px;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.menu a:hover,
+.menu .active {
+  color: #e0f2fe;
+  text-shadow: 0 0 10px rgba(125, 211, 252, 0.95);
+  text-decoration: underline;
+}
+
+.menu span {
+  color: white;
+  opacity: 0.9;
+}
+
+.hero {
+  position: relative;
+  height: calc(100vh - 88px);
+  min-height: 490px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:
+    radial-gradient(circle at 50% 45%, rgba(56, 189, 248, 0.65), transparent 34%),
+    linear-gradient(90deg, rgba(2, 132, 199, 0.95), rgba(14, 165, 233, 0.85), rgba(8, 47, 73, 0.95));
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(rgba(255,255,255,0.05) 2px, transparent 2px),
+    linear-gradient(90deg, rgba(255,255,255,0.05) 2px, transparent 2px);
+  background-size: 190px 190px;
+  opacity: 0.18;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 75%, rgba(0, 0, 0, 0.85));
+}
+
+.background-title {
+  position: absolute;
+  top: 18px;
+  left: 22px;
+  font-size: clamp(120px, 20vw, 360px);
+  font-weight: 700;
+  letter-spacing: 10px;
+  color: transparent;
+  -webkit-text-stroke: 4px rgba(255, 255, 255, 0.08);
+  opacity: 0.8;
+  white-space: nowrap;
+}
+
+.hero-lines span {
+  position: absolute;
+  color: rgba(255,255,255,0.32);
+  font-size: 36px;
+  font-weight: 700;
+  text-shadow: 0 0 12px rgba(255,255,255,0.55);
+}
+
+.line-one {
+  top: 32%;
+  left: 32%;
+}
+
+.line-one::before,
+.line-two::before {
+  content: "";
+  position: absolute;
+  height: 3px;
+  width: 280px;
+  background: rgba(255,255,255,0.25);
+  top: 50%;
+  right: 100%;
+  box-shadow: 0 0 15px rgba(255,255,255,0.6);
+}
+
+.line-two {
+  top: 63%;
+  right: 32%;
+}
+
+.join-card {
+  z-index: 5;
+  width: 380px;
+  height: 185px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  color: white;
+  text-decoration: none;
+  transform: rotate(-2deg);
+  border-radius: 24px;
+  background: linear-gradient(135deg, rgba(3, 105, 161, 0.95), rgba(56, 189, 248, 0.92));
+  box-shadow: 18px 22px 22px rgba(0, 0, 0, 0.45), 0 0 35px rgba(125, 211, 252, 0.55);
+  transition: 0.2s;
+}
+
+.join-card:hover {
+  transform: rotate(-2deg) scale(1.04);
+}
+
+.discord-icon {
+  width: 62px;
+  height: 50px;
+  border-radius: 12px;
+  background: white;
+  color: #0ea5e9;
+  font-size: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 20px rgba(255,255,255,0.8);
+}
+
+.join-card span,
+.join-card strong {
+  display: block;
+  font-size: 48px;
+  line-height: 1.15;
+  text-shadow: 0 0 16px rgba(255,255,255,0.85);
+}
+
+@media (max-width: 1100px) {
+  .navbar {
+    flex-direction: column;
+    height: auto;
+    gap: 15px;
+    padding: 16px;
+  }
+
+  .brand {
+    min-width: unset;
+  }
+
+  .menu {
+    flex-wrap: wrap;
+    justify-content: center;
+    font-size: 18px;
+  }
+
+  .hero {
+    height: 650px;
+  }
+}
