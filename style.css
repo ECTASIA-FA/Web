@@ -213,4 +213,69 @@ body {
   100% {
     transform: rotate(-2deg) translateY(0);
   }
+  .enterprise-page {
+  min-height: calc(100vh - 86px);
+  background: linear-gradient(120deg, #12b8ea, #045a7a);
+  padding: 35px 8%;
+  position: relative;
+}
+
+.page-title {
+  text-align: center;
+  color: white;
+  font-size: 38px;
+  font-weight: 900;
+}
+
+.title-line {
+  width: 520px;
+  height: 3px;
+  background: rgba(255,255,255,0.35);
+  margin: 18px auto;
+}
+
+.search-bar {
+  display: block;
+  width: 520px;
+  margin: 0 auto 35px auto;
+  padding: 14px 18px;
+  border: none;
+  outline: none;
+  border-radius: 6px;
+  background: rgba(0,0,0,0.35);
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.search-bar::placeholder {
+  color: rgba(255,255,255,0.65);
+}
+
+.enterprise-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.enterprise-card {
+  height: 165px;
+  border-radius: 6px;
+  background: linear-gradient(135deg, rgba(255,255,255,.25), rgba(0,0,0,.35));
+  box-shadow: 0 8px 18px rgba(0,0,0,.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 34px;
+  font-weight: 900;
+  text-shadow: 0 0 12px rgba(0,0,0,.8);
+  cursor: pointer;
+  transition: .25s;
+}
+
+.enterprise-card:hover {
+  transform: scale(1.04);
+  box-shadow: 0 12px 25px rgba(0,0,0,.55);
+}
 }
