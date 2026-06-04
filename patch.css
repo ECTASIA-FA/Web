@@ -1,107 +1,245 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    background: linear-gradient(120deg,#0aaee8,#064f73);
-    font-family: Arial, sans-serif;
-    color: white;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  background: #071923;
+  color: white;
+  overflow-x: hidden;
 }
 
 /* NAVBAR */
 
 .navbar {
-    height: 85px;
-    background: #063f5f;
-    display: flex;
-    align-items: center;
-    padding: 0 35px;
+  height: 88px;
+  background: rgba(4, 49, 70, 0.96);
+  display: flex;
+  align-items: center;
+  padding: 0 35px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.35);
+  position: relative;
+  z-index: 20;
 }
 
 .brand {
-    display: flex;
-    align-items: center;
-    gap: 18px;
-    margin-right: auto;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-right: auto;
 }
 
 .logo {
-    width: 60px;
-    height: 60px;
+  width: 62px;
+  height: 62px;
+  object-fit: contain;
 }
 
 .separator {
-    font-size: 30px;
+  color: rgba(255,255,255,0.85);
+  font-size: 32px;
+  font-weight: 900;
 }
 
 .title {
-    font-size: 28px;
-    font-weight: bold;
+  font-size: 31px;
+  font-weight: 900;
+  letter-spacing: 1px;
 }
 
 .status {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    font-size: 22px;
-    font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 26px;
+  font-weight: 900;
 }
 
 .green-dot {
-    width: 10px;
-    height: 10px;
-    background: #00ff55;
-    border-radius: 50%;
+  width: 12px;
+  height: 12px;
+  background: #00ff5a;
+  border-radius: 50%;
+  box-shadow: 0 0 12px #00ff5a;
 }
 
 .menu {
-    display: flex;
-    gap: 15px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
 }
 
 .menu a,
 .menu span {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
+  color: white;
+  text-decoration: none;
+  font-size: 21px;
+  font-weight: 900;
 }
 
-/* PATCH NOTES */
+.menu a:hover,
+.menu .active {
+  color: #74e6ff;
+}
+
+/* PAGE PATCH */
 
 .patch-page {
-    padding: 40px;
+  min-height: calc(100vh - 88px);
+  padding: 55px 8%;
+  background:
+    radial-gradient(circle at 20% 25%, rgba(94,220,255,0.32), transparent 28%),
+    radial-gradient(circle at 80% 70%, rgba(0,255,255,0.12), transparent 30%),
+    linear-gradient(135deg, #0bb5e8, #064c68);
+  position: relative;
+  overflow: hidden;
+}
+
+.patch-page::before {
+  content: "PATCH NOTE";
+  position: absolute;
+  top: 130px;
+  left: -60px;
+  font-size: 220px;
+  font-weight: 900;
+  color: transparent;
+  -webkit-text-stroke: 3px rgba(255,255,255,0.06);
+  letter-spacing: 12px;
+  z-index: 0;
 }
 
 .page-title {
-    text-align: center;
-    margin-bottom: 40px;
-    font-size: 42px;
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  font-size: 50px;
+  font-weight: 900;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+  text-shadow: 0 0 18px rgba(255,255,255,0.35);
+}
+
+.patch-subtitle {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  font-size: 15px;
+  letter-spacing: 2px;
+  color: rgba(255,255,255,0.7);
+  margin-bottom: 45px;
+}
+
+/* TIMELINE */
+
+.patch-timeline {
+  position: relative;
+  z-index: 2;
+  max-width: 950px;
+  margin: 0 auto;
 }
 
 .patch-card {
-    max-width: 900px;
-    margin: 0 auto 30px auto;
-    background: rgba(255,255,255,0.15);
-    border-radius: 15px;
-    padding: 25px;
-    backdrop-filter: blur(10px);
+  position: relative;
+  background: rgba(255,255,255,0.14);
+  border: 1px solid rgba(255,255,255,0.18);
+  border-radius: 18px;
+  padding: 28px 32px;
+  margin-bottom: 28px;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.35);
+  overflow: hidden;
+  transition: 0.25s ease;
+}
+
+.patch-card::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 7px;
+  height: 100%;
+  background: linear-gradient(#7ee6ff, #00a6ff);
+}
+
+.patch-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 22px 45px rgba(0,0,0,0.48);
+  border-color: rgba(255,255,255,0.35);
 }
 
 .patch-date {
-    color: #7ee6ff;
-    font-weight: bold;
+  display: inline-block;
+  font-family: Arial, sans-serif;
+  background: rgba(0,0,0,0.32);
+  color: #7ee6ff;
+  padding: 7px 14px;
+  border-radius: 30px;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  margin-bottom: 14px;
 }
 
 .patch-card h2 {
-    margin: 10px 0;
+  font-size: 34px;
+  font-weight: 900;
+  margin-bottom: 16px;
+  letter-spacing: 1px;
 }
 
 .patch-card ul {
-    padding-left: 20px;
+  list-style: none;
+  font-family: Arial, sans-serif;
 }
 
 .patch-card li {
-    margin: 8px 0;
+  position: relative;
+  padding-left: 28px;
+  margin: 12px 0;
+  font-size: 16px;
+  font-weight: 700;
+  color: rgba(255,255,255,0.88);
+}
+
+.patch-card li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #7ee6ff;
+  font-weight: 900;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+  .navbar {
+    height: auto;
+    padding: 18px;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .brand {
+    margin-right: 0;
+  }
+
+  .menu {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .page-title {
+    font-size: 38px;
+  }
+
+  .patch-card h2 {
+    font-size: 28px;
+  }
+
+  .patch-page::before {
+    font-size: 120px;
+  }
 }
