@@ -265,5 +265,43 @@ body {
     font-weight: 900;
 }
 
+  .discord-box {
+    width: 380px;
+    height: 180px;
+    background: linear-gradient(135deg, #1f9bd1, #55d6ff);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    text-decoration: none;
+    box-shadow: 0 20px 30px rgba(0,0,0,.4);
+
+    animation: floatCard 4s ease-in-out infinite;
+}
+
+@keyframes floatCard {
+    0% {
+        transform: rotate(-2deg) translateY(0px);
+    }
+    25% {
+        transform: rotate(-1deg) translateY(-5px);
+    }
+    50% {
+        transform: rotate(0deg) translateY(0px);
+    }
+    75% {
+        transform: rotate(1deg) translateY(-5px);
+    }
+    100% {
+        transform: rotate(-2deg) translateY(0px);
+    }
+}
+
+.discord-box:hover {
+    animation-play-state: paused;
+    transform: scale(1.05);
+}
+
 }
 
