@@ -58,8 +58,9 @@ nav a:hover {
     color: #7ee6ff;
 }
 
-.home {
-    height: calc(100vh - 85px);
+.home,
+.hero {
+    min-height: calc(100vh - 85px);
     background: linear-gradient(120deg, #0aaee8, #064f73);
     position: relative;
     display: flex;
@@ -136,4 +137,17 @@ nav a:hover {
     100% {
         transform: rotate(-2deg) translateY(0);
     }
+
+    .hero-lines {
+    display: none;
+}
+
+.discord-box {
+    margin: auto;
+}
+
+.discord-text {
+    text-align: center;
+    align-items: center;
+}
 }
