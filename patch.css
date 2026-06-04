@@ -14,14 +14,12 @@ body {
 /* NAVBAR */
 
 .navbar {
-  height: 88px;
-  background: rgba(4, 49, 70, 0.96);
+  height: 85px;
+  background: #063f5f;
   display: flex;
   align-items: center;
   padding: 0 35px;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.35);
-  position: relative;
-  z-index: 20;
+  color: white;
 }
 
 .brand {
@@ -32,58 +30,58 @@ body {
 }
 
 .logo {
-  width: 62px;
-  height: 62px;
+  width: 60px;
+  height: 60px;
   object-fit: contain;
 }
 
 .separator {
-  color: rgba(255,255,255,0.85);
-  font-size: 32px;
-  font-weight: 900;
+  color: white;
+  font-size: 28px;
+  font-weight: bold;
 }
 
 .title {
-  font-size: 31px;
+  color: white;
+  font-size: 28px;
   font-weight: 900;
-  letter-spacing: 1px;
 }
 
 .status {
   display: flex;
   align-items: center;
-  gap: 10px;
-  font-size: 26px;
+  gap: 8px;
+  color: white;
+  font-size: 22px;
   font-weight: 900;
 }
 
 .green-dot {
-  width: 12px;
-  height: 12px;
-  background: #00ff5a;
+  width: 10px;
+  height: 10px;
+  background: #00ff55;
   border-radius: 50%;
-  box-shadow: 0 0 12px #00ff5a;
+  box-shadow: 0 0 8px #00ff55;
 }
 
 .menu {
   display: flex;
   align-items: center;
-  gap: 18px;
+  gap: 15px;
 }
 
 .menu a,
 .menu span {
   color: white;
   text-decoration: none;
-  font-size: 21px;
-  font-weight: 900;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 .menu a:hover,
 .menu .active {
-  color: #74e6ff;
+  color: #7ee6ff;
 }
-
 /* PAGE PATCH */
 
 .patch-page {
