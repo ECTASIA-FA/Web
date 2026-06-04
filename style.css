@@ -1,257 +1,216 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: Impact, Arial, sans-serif;
-    background: #079bd3;
-    overflow-x: hidden;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  background: #079bd3;
+  overflow-x: hidden;
 }
 
-header {
-    height: 85px;
-    background: #063f5f;
-    display: flex;
-    align-items: center;
-    padding: 0 35px;
-    color: white;
+/* NAVBAR */
+
+.navbar {
+  height: 86px;
+  background: #064461;
+  display: flex;
+  align-items: center;
+  padding: 0 28px;
+  color: white;
 }
 
 .brand {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    margin-right: auto;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-right: auto;
 }
 
-.brand img {
-    width: 48px;
-    height: 48px;
-    object-fit: contain;
+.logo {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
 }
 
-.brand h1 {
-    font-size: 34px;
-    letter-spacing: 1px;
-}
-
-.brand span {
-    font-size: 14px;
-    margin-left: 5px;
-}
-
-nav {
-    display: flex;
-    gap: 22px;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-    font-size: 20px;
-    transition: .2s;
-}
-
-nav a:hover {
-    color: #7ee6ff;
-}
-
-.home,
-.hero {
-    min-height: calc(100vh - 85px);
-    background: linear-gradient(120deg, #0aaee8, #064f73);
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-}
-
-.background-title {
-    position: absolute;
-    font-size: 250px;
-    color: transparent;
-    -webkit-text-stroke: 3px rgba(255,255,255,0.08);
-    letter-spacing: 10px;
-    z-index: 1;
-}
-
-.discord-box {
-    width: 420px;
-    height: 190px;
-    background: linear-gradient(135deg, #1589bd, #54d8ff);
-    border-radius: 22px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 25px;
-    text-decoration: none;
-    box-shadow: 0 25px 35px rgba(0,0,0,.45);
-    z-index: 2;
-    animation: balanceCard 4s ease-in-out infinite;
-}
-
-.discord-box:hover {
-    animation-play-state: paused;
-    transform: scale(1.05);
-}
-
-.discord-box img {
-    width: 85px;
-    height: 85px;
-    object-fit: contain;
-}
-
-.discord-text {
-    display: flex;
-    flex-direction: column;
-    color: white;
-    text-shadow: 0 0 12px rgba(255,255,255,.8);
-}
-
-.discord-text span {
-    font-size: 34px;
-    font-weight: 700;
-}
-
-.discord-text strong {
-    font-size: 42px;
-    font-weight: 900;
-}
-
-@keyframes balanceCard {
-    0% {
-        transform: rotate(-2deg) translateY(0);
-    }
-    25% {
-        transform: rotate(-1deg) translateY(-6px);
-    }
-    50% {
-        transform: rotate(1deg) translateY(0);
-    }
-    75% {
-        transform: rotate(2deg) translateY(-6px);
-    }
-    100% {
-        transform: rotate(-2deg) translateY(0);
-    }
-
-    .hero-lines {
-    display: none;
-}
-
-.discord-box {
-    margin: auto;
-}
-
-.discord-text {
-    text-align: center;
-    align-items: center;
-}
-
-.hero-lines {
-    position: absolute;
-    inset: 0;
-    pointer-events: none;
-    z-index: 1;
-}
-
-.line {
-    position: absolute;
-    color: rgba(255,255,255,0.18);
-    font-size: 42px;
-    font-weight: 900;
-    text-transform: uppercase;
-}
-
-.line::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    margin-left: 15px;
-    width: 180px;
-    height: 3px;
-    background: rgba(255,255,255,0.18);
-}
-
-.line-one {
-    top: 120px;
-    left: 120px;
-}
-
-.line-two {
-    bottom: 150px;
-    right: 180px;
-}
 .separator {
-    color: white;
-    font-size: 28px;
-    font-weight: bold;
-    opacity: 0.8;
+  color: white;
+  font-size: 34px;
+  font-weight: 900;
+  opacity: 0.9;
 }
 
 .title {
-    color: white;
-    font-size: 28px;
-    font-weight: 900;
+  color: white;
+  font-size: 32px;
+  font-weight: 900;
+  letter-spacing: 1px;
 }
 
 .status {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    color: white;
-    font-size: 24px;
-    font-weight: 900;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: white;
+  font-size: 28px;
+  font-weight: 900;
 }
 
 .green-dot {
-    width: 10px;
-    height: 10px;
-    background: #00ff55;
-    border-radius: 50%;
-    box-shadow: 0 0 8px #00ff55;
+  width: 12px;
+  height: 12px;
+  background: #00ff55;
+  border-radius: 50%;
+  box-shadow: 0 0 12px #00ff55;
 }
 
+/* MENU */
+
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.menu a,
+.menu span {
+  color: white;
+  text-decoration: none;
+  font-size: 22px;
+  font-weight: 900;
+}
+
+.menu a:hover,
+.menu .active {
+  color: #7ee6ff;
+}
+
+/* HERO */
+
+.hero {
+  min-height: calc(100vh - 86px);
+  background: linear-gradient(120deg, #12b8ea, #045a7a);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 28% 35%, rgba(255,255,255,0.13), transparent 28%),
+    radial-gradient(circle at 70% 62%, rgba(255,255,255,0.08), transparent 26%);
+  z-index: 0;
+}
+
+/* TEXTES EN FOND */
+
 .hero-lines {
-    position: absolute;
-    inset: 0;
-    pointer-events: none;
-    z-index: 1;
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
 }
 
 .line {
-    position: absolute;
-    color: rgba(255,255,255,0.08);
-    font-size: 65px;
-    font-weight: 900;
-    text-transform: uppercase;
-    letter-spacing: 3px;
+  position: absolute;
+  color: transparent;
+  -webkit-text-stroke: 2px rgba(255,255,255,0.13);
+  font-size: 70px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-style: italic;
 }
 
-/* ---------- ECTASIA EN HAUT ---------- */
-
 .line-one {
-    top: 120px;
-    left: 120px;
+  top: 90px;
+  right: 210px;
 }
 
 .line-one::before {
-    content: "────────";
-    margin-right: 20px;
+  content: "──────";
+  margin-right: 25px;
 }
 
-/* ---------- FREE ACCESS EN BAS ---------- */
-
 .line-two {
-    bottom: 120px;
-    right: 120px;
+  bottom: 95px;
+  right: 140px;
 }
 
 .line-two::after {
-    content: "────────";
-    margin-left: 20px;
+  content: "──────";
+  margin-left: 25px;
 }
+
+/* CARTE DISCORD */
+
+.discord-box {
+  position: relative;
+  z-index: 5;
+  width: 430px;
+  height: 190px;
+  background: linear-gradient(135deg, #0b95d2, #5edcff);
+  border-radius: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 28px;
+  text-decoration: none;
+  box-shadow: 0 25px 35px rgba(0,0,0,.45);
+  animation: balanceCard 4s ease-in-out infinite;
+}
+
+.discord-box:hover {
+  animation-play-state: paused;
+  transform: scale(1.05);
+}
+
+.discord-box img {
+  width: 82px;
+  height: 82px;
+  object-fit: contain;
+}
+
+.discord-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  text-shadow: 0 0 14px rgba(255,255,255,.9);
+}
+
+.discord-text span {
+  font-size: 36px;
+  font-weight: 900;
+}
+
+.discord-text strong {
+  font-size: 48px;
+  font-weight: 900;
+}
+
+/* ANIMATION */
+
+@keyframes balanceCard {
+  0% {
+    transform: rotate(-2deg) translateY(0);
+  }
+  25% {
+    transform: rotate(-1deg) translateY(-6px);
+  }
+  50% {
+    transform: rotate(1deg) translateY(0);
+  }
+  75% {
+    transform: rotate(2deg) translateY(-6px);
+  }
+  100% {
+    transform: rotate(-2deg) translateY(0);
+  }
 }
