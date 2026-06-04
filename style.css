@@ -214,4 +214,44 @@ nav a:hover {
     border-radius: 50%;
     box-shadow: 0 0 8px #00ff55;
 }
+
+.hero-lines {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.line {
+    position: absolute;
+    color: rgba(255,255,255,0.08);
+    font-size: 65px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+/* ---------- ECTASIA EN HAUT ---------- */
+
+.line-one {
+    top: 120px;
+    left: 120px;
+}
+
+.line-one::before {
+    content: "────────";
+    margin-right: 20px;
+}
+
+/* ---------- FREE ACCESS EN BAS ---------- */
+
+.line-two {
+    bottom: 120px;
+    right: 120px;
+}
+
+.line-two::after {
+    content: "────────";
+    margin-left: 20px;
+}
 }
