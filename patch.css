@@ -1,0 +1,107 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(120deg,#0aaee8,#064f73);
+    font-family: Arial, sans-serif;
+    color: white;
+}
+
+/* NAVBAR */
+
+.navbar {
+    height: 85px;
+    background: #063f5f;
+    display: flex;
+    align-items: center;
+    padding: 0 35px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-right: auto;
+}
+
+.logo {
+    width: 60px;
+    height: 60px;
+}
+
+.separator {
+    font-size: 30px;
+}
+
+.title {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.status {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.green-dot {
+    width: 10px;
+    height: 10px;
+    background: #00ff55;
+    border-radius: 50%;
+}
+
+.menu {
+    display: flex;
+    gap: 15px;
+}
+
+.menu a,
+.menu span {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* PATCH NOTES */
+
+.patch-page {
+    padding: 40px;
+}
+
+.page-title {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 42px;
+}
+
+.patch-card {
+    max-width: 900px;
+    margin: 0 auto 30px auto;
+    background: rgba(255,255,255,0.15);
+    border-radius: 15px;
+    padding: 25px;
+    backdrop-filter: blur(10px);
+}
+
+.patch-date {
+    color: #7ee6ff;
+    font-weight: bold;
+}
+
+.patch-card h2 {
+    margin: 10px 0;
+}
+
+.patch-card ul {
+    padding-left: 20px;
+}
+
+.patch-card li {
+    margin: 8px 0;
+}
