@@ -185,4 +185,33 @@ nav a:hover {
     bottom: 150px;
     right: 180px;
 }
+.separator {
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+    opacity: 0.8;
+}
+
+.title {
+    color: white;
+    font-size: 28px;
+    font-weight: 900;
+}
+
+.status {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: white;
+    font-size: 24px;
+    font-weight: 900;
+}
+
+.green-dot {
+    width: 10px;
+    height: 10px;
+    background: #00ff55;
+    border-radius: 50%;
+    box-shadow: 0 0 8px #00ff55;
+}
 }
